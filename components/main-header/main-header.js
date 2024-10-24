@@ -7,6 +7,7 @@ import Styles from "./main-header.module.css";
 import MainHeaderBackground from "./main-header-background";
 import { NavLink } from "./nav-links";
 
+
 export default function MainHeader() {
 
   return (
