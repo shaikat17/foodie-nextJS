@@ -14,7 +14,7 @@ export default function ImagePicker({ label, name }) {
   }
     
     function handleImageChange(event) {
-        const file = event.target.files[0];
+      const file = event.target.files[0];
         
         if (!file) {
             setImage(null);
@@ -24,6 +24,7 @@ export default function ImagePicker({ label, name }) {
       const reader = new FileReader();
       reader.onload = () => {
         setImage(reader.result);
+        // handleImage(image);
       };
       reader.readAsDataURL(file);
     }
