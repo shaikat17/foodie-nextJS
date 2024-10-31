@@ -29,7 +29,7 @@ export default function ShareMealPage() {
       ...prev,
       [name]: value,
     }));
-    console.log(name, value);
+    // console.log(name, value);
   };
 
 
@@ -39,7 +39,7 @@ export default function ShareMealPage() {
 
     formData['image'] = e.target.image.files[0];
 
-    console.log(formData)
+    // console.log(formData)
 
     const formDataToSubmit = new FormData();
   Object.keys(formData).forEach((key) => {
@@ -50,15 +50,9 @@ export default function ShareMealPage() {
     if (response.error) {
       setErrorMessage(response.message);
     } else {
+      // console.log('Success!');
       router.push('/meals');
       }
-  };
-
-  const handleImage = (image) => {
-    setFormData((prev) => ({
-      ...prev,
-      image,
-    }));
   };
 
 
